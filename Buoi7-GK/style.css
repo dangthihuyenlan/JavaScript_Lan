@@ -1,0 +1,21 @@
+/* Tùy chỉnh CSS cho giao diện */
+.container {
+  max-width: 800px;
+  margin: auto;
+}
+
+.btn {
+  margin-right: 5px;
+}
+
+.mt-5 {
+  margin-top: 3rem !important;
+}
+
+.mb-3 {
+  margin-bottom: 1rem !important;
+}
+
+.text-center {
+  text-align: center !important;
+}
