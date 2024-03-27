@@ -1,0 +1,77 @@
+/* style.css */
+
+/* Body styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f7fafc;
+}
+
+/* Navigation styles */
+nav {
+    background-color: #1e40af;
+    color: #fff;
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+}
+
+.search-input {
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+    border: 1px solid #ccc;
+    margin-right: 0.5rem;
+}
+
+.search-button {
+    background-color: #4a5568;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+    cursor: pointer;
+}
+
+/* Form styles */
+form {
+    background-color: #fff;
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Table styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 1rem;
+    text-align: left;
+}
+
+thead {
+    background-color: #edf2f7;
+}
+
+/* Button styles */
+button {
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #4a5568;
+}
+
+/* Media queries */
+@media (min-width: 768px) {
+    .max-w-sm {
+        max-width: 24rem;
+    }
+}

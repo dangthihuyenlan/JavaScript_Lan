@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Hotel</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body class="pb-20" onload="handleRenderProducts()">
+    <nav class="container mx-auto flex items-center justify-start py-3">
+
+        <ul class="flex items-center flex-1 justify-center gap-3.5"></ul>
+        <div class="search-container">
+            <input type="text" placeholder="Tìm kiếm..." class="search-input" />
+            <button class="search-button">Tìm kiếm</button>
+        </div>
+        
+    </nav>
+
+    <section class="container mx-auto">
+        <h1 class="mt-10 text-3xl mb-8 text-center uppercase font-medium text-red-600" id="title">Thêm Phòng Khách Sạn</h1>
+
+        <form class="max-w-sm mx-auto" name="productInfo" action="#">
+            <div class="mb-5">
+                <label for="phong" class="block mb-2 text-sm font-medium text-gray-900 ">Số Phòng</label>
+                <input type="phong" id="phong"
+                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+                    placeholder="A01" required />
+            </div>
+            <div class="mb-5">
+                <label for="loai" class="block mb-2 text-sm font-medium text-gray-900 ">Loại Phòng</label>
+                <input type="loai" id="loai"
+                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+                    placeholder="VIP" required />
+            </div>
+            <div class="mb-5">
+                <label for="gia" class="block mb-2 text-sm font-medium text-gray-900 ">Giá Phòng Thuê Theo Giờ</label>
+                <input type="gia" id="gia"
+                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+                    placeholder="500/1h" required />
+            </div>
+            <div class="mb-5">
+                <label for="mota" class="block mb-2 text-sm font-medium text-gray-900 ">Mô Tả</label>
+                <input type="mota" id="mota"
+                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+                    placeholder="View Bờ Biển" required />
+            </div>
+            <div class="mb-5">
+                <label class="block mb-2 text-sm font-medium text-gray-900" for="file_input">Thêm Ảnh</label>
+                <input
+                    class="block w-full text-sm text-gray-900 border p-2 border-gray-300 rounded-lg cursor-pointer bg-gray-50"
+                    id="file_input" type="file" name="file_input">
+            </div>
+            <div class="mb-5 flex justify-between">
+                </div>
+                <input type="hidden" id="idProductUpdate" />
+            </div>
+            <button 
+            type="button"
+            id="btn-create"
+            onclick="handleAddProduct()"
+            class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center">Add</button>
+        <button 
+            type="button"
+            id="btn-update"
+            class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center hidden" onclick="updateProduct()">Update</button>
+
+
+
+        </form>
+    </section>
+
+    <section class="container mx-auto mt-20">
+        <h1 class="mt-10 text-3xl text-center uppercase font-medium text-red-600">Phòng Khách Sạn</h1>
+        <div class="relative overflow-x-auto shadow-md sm:rounded-lg mt-10">
+            <table class="w-full text-sm text-left rtl:text-right text-gray-500">
+                <thead class="text-xs text-gray-700 uppercase bg-gray-50">
+                    <tr>
+                        <th scope="col" class="px-6 py-3">
+                            Số Phòng
+                        </th>
+                        <th scope="col" class="px-6 py-3">
+                            Loại Phòng
+                        </th>
+                        <th scope="col" class="px-6 py-3">
+                            Giá Phòng Thuê Theo Giờ
+                        </th>
+                        <th scope="col" class="px-6 py-3">
+                            Ảnh
+                        </th>
+                        <th scope="col" class="px-6 py-3">
+                            Mô Tả
+                        </th>
+                
+                        <th scope="col" class="px-6 py-3">
+                            Tùy Chỉnh
+                        </th>
+                    </tr>
+                </thead>
+                <tbody id="product"></tbody>
+            </table>
+        </div>
+    </section>
+    <script src="./data.js"></script>
+</body>
+
+</html>
