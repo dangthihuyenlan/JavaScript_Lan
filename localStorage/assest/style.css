@@ -1,0 +1,11 @@
+/* style.css */
+
+/* Body styles */
+
+
+/* Media queries */
+@media (min-width: 768px) {
+    .max-w-sm {
+        max-width: 24rem;
+    }
+}
